@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Churras - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+
+<body>
+    <h4 class="center">Cadastrar Comidas</h4>
+
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="comida" type="text">
+                        <label for="comida">Comida</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="preco" type="text">
+                        <label for="preco">Preço</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="ingredientes" class="materialize-textarea"></textarea>
+                        <label for="ingredientes">Ingredientes</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>Imagem</span>
+                            <input type="file" id="file"/>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload file" id="fileButton" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light right" id="addComida">Adicionar</button>
+                    </div>
+                </div>
+                <a class="right" href="index.html">Voltar para Página Inicial</a>
+
+            </form>
+        </div>
+        </div>
+
+
+        <div class="container">
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comida</th>
+                        <th>Ingredientes</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-comidas">
+                </tbody>
+            </table>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/comida.js"></script>
+</body>
+
+</html>
